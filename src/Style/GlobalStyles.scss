@@ -1,7 +1,73 @@
+@use "./colors.scss" as colors;
+
 .container {
   padding: 0 145px;
 }
 
 a {
   text-decoration: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section-router {
+  margin-top: 22px;
+  font-weight: 400;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  span {
+    margin-right: 10px;
+    color: colors.$cardHeaderText;
+    &.active {
+      color: colors.$grayTextColor;
+    }
+  }
+}
+
+.section-header {
+  font-weight: 700;
+  font-size: 30px;
+  margin: 12px 0;
+  line-height: 40px;
+  color: colors.$blueTextColor;
+}
+
+.card {
+  .card-image {
+    img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+  .card-body {
+    padding: 25px;
+    padding-bottom: 0;
+    &__title {
+      color: colors.$cardHeaderText;
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      line-height: 26px;
+    }
+    &__description {
+      color: colors.$cardDescriptionText;
+      line-height: 22px;
+      font-weight: 400;
+    }
+  }
+  .card-footer {
+    padding: 25px 20px;
+    font-weight: 400;
+    font-size: 14px;
+    color: colors.$cardFooterText;
+  }
+}
+
+button {
+  cursor: pointer;
 }

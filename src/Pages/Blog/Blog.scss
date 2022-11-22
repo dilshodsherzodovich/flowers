@@ -1,0 +1,39 @@
+@use "../../Style/colors.scss" as colors;
+
+.blog {
+  padding-bottom: 60px;
+  &-cards {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .single-card {
+      width: calc(100% / 3);
+      padding: 10px;
+      .card {
+        box-shadow: colors.$box-shadow;
+        border-radius: 5px;
+        overflow: hidden;
+        border: 1px solid colors.$grayBorderColor;
+      }
+    }
+  }
+  .reload-btn {
+    padding: 0 10px;
+    margin-top: 60px;
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+      border: 1px solid colors.$grayBackGround;
+      background: none;
+      width: 100%;
+      img {
+        margin-right: 15px;
+      }
+      &:hover {
+        box-shadow: colors.$box-shadow;
+      }
+    }
+  }
+}

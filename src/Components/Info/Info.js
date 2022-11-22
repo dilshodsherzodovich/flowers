@@ -27,7 +27,9 @@ const Info = () => {
             <Link className="info__btn">Отзывы</Link>
           </li>
           <li>
-            <Link className="info__btn">Блог</Link>
+            <Link to={"/blog"} className="info__btn">
+              Блог
+            </Link>
           </li>
           <li>
             <button

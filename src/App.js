@@ -4,6 +4,7 @@ import "./App.css";
 import "./Style/GlobalStyles.scss";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
+import Blog from "./Pages/Blog/Blog";
 import NotFound from "./Pages/NotFound/NotFound";
 
 // style components
@@ -17,6 +18,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </Provider>
     </div>
