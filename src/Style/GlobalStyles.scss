@@ -22,9 +22,21 @@ a {
   align-items: center;
   span {
     margin-right: 10px;
-    color: colors.$cardHeaderText;
-    &.active {
+    a {
+      color: colors.$cardHeaderText;
+    }
+
+    &.active a {
       color: colors.$grayTextColor;
+    }
+  }
+  span {
+    &:nth-child(2) {
+      display: inline-block;
+      width: 20px;
+      height: 14px;
+      background: url("../assets/Icons/nextIcon.png");
+      background-size: cover;
     }
   }
 }

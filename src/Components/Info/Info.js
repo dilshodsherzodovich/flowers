@@ -24,7 +24,9 @@ const Info = () => {
             <Link className="info__btn">Оплата</Link>
           </li>
           <li>
-            <Link className="info__btn">Отзывы</Link>
+            <Link to={"/reviews"} className="info__btn">
+              Отзывы
+            </Link>
           </li>
           <li>
             <Link to={"/blog"} className="info__btn">

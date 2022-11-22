@@ -9,7 +9,6 @@ import flower2 from "../../assets/images/flower2.png";
 import flower3 from "../../assets/images/flower3.png";
 
 //Icons
-import nextIcon from "../../assets/Icons/nextIcon.png";
 import reloadIcon from "../../assets/Icons/reload.png";
 
 function Blog() {
@@ -79,9 +78,7 @@ function Blog() {
         <span>
           <Link to="/">Главная</Link>
         </span>
-        <span>
-          <img src={nextIcon} alt="" />
-        </span>
+        <span></span>
         <span className="active">
           <Link to={"/blog"}>Блог</Link>
         </span>

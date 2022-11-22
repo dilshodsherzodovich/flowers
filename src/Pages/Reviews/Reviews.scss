@@ -1,0 +1,78 @@
+@use "../../Style/colors.scss" as colors;
+
+.reviews {
+  padding-bottom: 80px;
+  .header-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    button {
+      padding: 1rem 1.25rem;
+      background: none;
+      border: 1px solid colors.$greenBtnColor;
+      color: colors.$greenBtnColor;
+      border-radius: 5px;
+      font-weight: 600;
+    }
+  }
+  &-cards {
+    .review-item {
+      margin-top: 30px;
+      border: 1px solid colors.$boldGrayBorderColor;
+      padding: 45px 50px;
+      border-radius: 10px;
+      &:hover {
+        border-color: transparent;
+        box-shadow: colors.$box-shadow;
+      }
+      display: flex;
+      justify-content: space-between;
+      .content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 70%;
+        .texts {
+          .stars {
+            margin-bottom: 10px;
+            i {
+              color: colors.$starColor;
+              margin-right: 10px;
+            }
+          }
+          .review-owner {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 26px;
+            color: colors.$blueTextColor;
+            margin-bottom: 15px;
+          }
+          .review-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: colors.$blueTextColor;
+          }
+        }
+        .footer {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 22px;
+          color: colors.$blueTextColor;
+          span {
+            color: colors.$greenBtnColor;
+            margin-left: 10px;
+          }
+        }
+      }
+      .img-box {
+        padding: 10px;
+        border-radius: 100%;
+        border: 1px solid colors.$greenBtnColor;
+        img {
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+}
