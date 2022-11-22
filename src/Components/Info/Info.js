@@ -58,7 +58,9 @@ const Info = () => {
             </ul>
           </li>
           <li>
-            <Link className="info__btn">Контакты</Link>
+            <Link to={"/contact"} className="info__btn">
+              Контакты
+            </Link>
           </li>
         </ul>
         <ul className="info__list">

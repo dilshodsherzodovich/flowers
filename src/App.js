@@ -10,6 +10,7 @@ import NotFound from "./Pages/NotFound/NotFound";
 // style components
 import store from "./redux/store";
 import Reviews from "./Pages/Reviews/Reviews";
+import Contact from "./Pages/Contact/Contact";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/reviews" element={<Reviews />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Provider>
     </div>
