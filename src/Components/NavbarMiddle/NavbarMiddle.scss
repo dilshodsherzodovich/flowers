@@ -1,0 +1,208 @@
+
+.middle {
+    padding: 16px 0;
+}
+
+.middle__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.middle__links {
+    display: flex;
+    align-items: center;
+}
+
+.middle__delivery {
+    color: #343437;
+    margin-left: 40px;
+    font-size: 14px;
+    line-height: 20px;
+    width: 110px;
+}
+
+.info__search {    
+    display: flex;
+}
+
+.info__inp {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 14px 250px 14px 11px;
+    border: 1px solid #D0D2D7;
+    border-radius: 16px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: rgba(125, 129, 142, 1);
+    }
+}
+
+.info__inp-search {
+    padding: 0;
+    border: none;
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        width: 18px;
+        height: 18px;
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/lupa.svg") no-repeat;
+        top: 12px;
+        right: 20px;
+    }
+}
+
+.info__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.info__wrapper-btn {
+    padding: 0;
+    border: none;
+    color: #222A46;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: bold;
+    background-color: transparent;
+    position: relative;
+    cursor: pointer;
+
+    &::before {
+        width: 18px;
+        height: 18px;
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/Path.svg") no-repeat;
+        display: block;
+        right: -25px;
+        top: 5px;
+    }
+}
+
+.info__wrapper-spn {
+    display: inline-block;
+    color: #E2195B;
+    text-decoration: underline;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: bold;
+    position: relative;
+
+    &::before {
+        width: 40px;
+        height: 40px;
+        content: "";
+        display: block;
+        position: absolute;
+        border-radius: 50%;
+        border: 1px solid #D0D2D7;
+        left: -50px;
+        top: -20px;
+    }
+
+    &::after {
+        width: 24px;
+        height: 24px;
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/phone.svg") no-repeat;
+        left: -40px;
+        top: -10px;
+    }
+}
+
+.info-social__list {
+    display: flex;
+    align-items: center;
+}
+
+.info-social__item--active {
+    display: flex;
+    align-items: center;
+}
+
+.info-social__list-btn {
+    padding: 0;
+    border: 1px solid #D0D2D7;
+    padding: 20px;
+    border-radius: 50%;
+    margin-right: 20px;
+    position: relative;
+    background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(226, 25, 91, 0.1);
+    }
+
+    &::before {
+        width: 22px;
+        height: 18px;
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/heart-icon.svg") no-repeat;
+        display: block;
+        right: 8px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.info-social__item-link {
+    display: inline-block;
+    border: 1px solid #D0D2D7;
+    padding: 20px;
+    border-radius: 50%;
+    position: relative;
+
+    &:hover {
+        background-color: rgb(243, 224, 224);
+    }
+
+    &::before {
+        width: 22px;
+        height: 22px;
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/shopping.svg") no-repeat;
+        display: block;
+        right: 9px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+
+.info-social__item-span {
+    display: block;
+    margin-left: 6px;
+    color: #E2195B;
+    font-weight: bold;
+    position: relative;
+}
+
+.count {
+    display: block;
+    width: 12px;
+    height: 12px;
+    padding: 5px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #ee2f6e;
+    position: absolute;
+    text-align: center;
+    left: -20px;
+    top: -16px;
+}
+

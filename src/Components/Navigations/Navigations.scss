@@ -1,0 +1,11 @@
+.nav {
+    padding: 19px 0;
+    box-shadow: 4px, 4px
+    rgba(34, 42, 70, 0.08);
+}
+
+.nav__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

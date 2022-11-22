@@ -2,15 +2,19 @@
 import { Provider } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 
+
+// style components
 import store from './redux/store';
 
 function App() {
   return (
     <div className="app">
       <Provider store={store}>
+        <Navbar />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='*' element={<NotFound />} />
