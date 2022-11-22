@@ -15,17 +15,17 @@ const navigation = [
     return (
         <div className="nav">
             <div className="container nav__container">
-                <Link>АКЦИИ</Link>
+                <Link className="nav__link">АКЦИИ</Link>
                 <div>
                     {navigation.map(item => {
                         return (
-                            <button>{item}</button>
+                            <button className="nav__btn">{item}</button>
                         )
                     })}
                 </div>
                 <div>
-                    <Link>Свадебные букеты</Link>
-                    <Link>Повод</Link>
+                    <Link className="nav__link-active">Свадебные букеты</Link>
+                    <Link className="nav__link-active">Повод</Link>
                 </div>
             </div>
         </div>

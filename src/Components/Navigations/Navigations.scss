@@ -9,3 +9,69 @@
     align-items: center;
     justify-content: space-between;
 }
+
+.nav__link {
+    display: block;
+    color: #E2195B;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+    margin-left: 30px;
+    position: relative;
+
+    &::before {
+        display: block;
+        width: 20px;
+        height: 20px;
+        content: "";
+        position: absolute;
+        background: url("../../assets/images/discount.svg") no-repeat;
+        left: -27px;
+        top: -2px;
+        margin-right: 41px;
+    }
+}
+
+.nav__btn {
+    margin-right: 66px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    color: #1B1C21;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &::after {
+        width: 13px;
+        height: 8px;
+        content: "";
+        position: absolute;
+        display: block;
+        background: url("../../assets/images/Path.svg") no-repeat;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -20px;
+    }
+}
+
+
+
+.nav__link-active {
+    margin-left: 41px;
+    color: #1B1C21;
+    font-weight: bold;
+    line-height: 20px;
+    font-size: 16px;
+
+    &:nth-child(1) {
+        margin-left: 0;
+    }
+}

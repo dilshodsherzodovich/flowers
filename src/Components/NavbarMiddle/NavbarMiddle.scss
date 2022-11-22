@@ -206,3 +206,91 @@
     top: -16px;
 }
 
+.info__wrapper {
+    position: relative;
+}
+
+.info__content {
+    width: 185px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: absolute;
+    top: 22px;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s all ease;
+}
+
+.info__content-opened {
+    height: 230px;
+    padding: 20px 20px 15px 54px;
+    width: 185px;
+    background-color: #fff;
+    border-radius: 8px;
+    position: absolute;
+    top: 22px;
+    z-index: 2;
+    position: absolute;
+    box-shadow: 1px 2px 3px 0.4px rgba(22, 30, 30, 0.1);
+}
+
+
+.info__content-bottom {
+    padding-top: 15px;
+}
+
+.info__content-link {
+    display: inline-block;
+    color: #1B1C21;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 16px;
+    font-weight: bold;
+
+    &:hover {
+        color: #0093A2;
+    }
+
+    &::before {
+        width: 22px;
+        height: 22px;
+        content: "";
+        position: absolute;
+        display: block;
+        background: url("../../assets/images/phone.svg") no-repeat;
+        left: 20px;
+    }
+}
+
+.info__content-link--location::before {
+    background-image: url("../../assets/images/location-icon.svg");
+}
+
+.info__content-link--sms::before {
+    background-image: url("../../assets/images/sms-icon.svg");
+}
+
+.info__social-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    
+
+    &::before {
+        width: 260px;
+        height: 2px;
+        background-color: #D0D2D7;
+        content: "";
+        position: absolute;
+        bottom: 100px;
+        left: 0;
+    }
+}
+
+.info__content-title {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    text-align: center;
+}
