@@ -4,14 +4,14 @@ import Navigations from "../Navigations/Navigations";
 import Reklama from "../Reklama/Reklama";
 
 const Navbar = () => {
-    return (
-        <div>
-            <Reklama />
-            <Info />
-            <NavbarMiddle />
-            <Navigations />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Reklama />
+      <Info />
+      <NavbarMiddle />
+      <Navigations />
+    </div>
+  );
+};
 
-export default Navbar ;
+export default Navbar;
