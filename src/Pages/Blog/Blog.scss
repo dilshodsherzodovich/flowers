@@ -1,6 +1,9 @@
 @use "../../Style/colors.scss" as colors;
 
 .blog {
+  * {
+    box-sizing: border-box;
+  }
   padding-bottom: 60px;
   &-cards {
     display: flex;

@@ -66,7 +66,11 @@
         }
       }
       .img-box {
-        padding: 10px;
+        width: 220px;
+        height: 220px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 100%;
         border: 1px solid colors.$greenBtnColor;
         img {
