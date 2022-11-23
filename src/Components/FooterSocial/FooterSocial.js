@@ -56,7 +56,7 @@ const FooterSocial = () => {
                 <li className="social__item">
                     {/* eslint-disable-next-line */}
                     <a href="https://masterCard.com" target="_blank" className="social__link">
-                        <img className="socail__img" src={oval} alt="oval icon" width={27} height={10} />
+                        <img className="socail__img" src={oval} alt="oval icon" width={23} height={22} />
                     </a>
                 </li>
             </ul>
