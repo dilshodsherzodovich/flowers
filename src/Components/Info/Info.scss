@@ -1,13 +1,10 @@
-.info {
-  padding: 15px 0;
-  background-color: rgba(242, 243, 245, 1);
-  background-color: red;
-}
 
 .info__container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 50px;
+  background-color: rgba(242, 243, 245, 1);
 }
 
 .info__btn {

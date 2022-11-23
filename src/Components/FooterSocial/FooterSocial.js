@@ -69,19 +69,19 @@ const FooterSocial = () => {
                             <img src={footerVk} alt="footer vk.com icon" width={32} height={32} />
                         </a>
                     </li>
-                    <li>
+                    <li className="nation__item">
                         {/* eslint-disable-next-line */}
                         <a href="https://vk.com" target="_blank">
                             <img src={facebook} alt="footer facebook.com icon" width={32} height={32} />
                         </a>
                     </li>
-                    <li>
+                    <li className="nation__item">
                         {/* eslint-disable-next-line */}
                         <a href="https://vk.com" target="_blank">
                             <img src={instagram} alt="footer instagram.com icon" width={32} height={32} />
                         </a>
                     </li>
-                    <li>
+                    <li className="nation__item">
                         {/* eslint-disable-next-line */}
                         <a href="https://vk.com" target="_blank">
                             <img src={youTube} alt="footer youTube.com icon" width={32} height={32} />
