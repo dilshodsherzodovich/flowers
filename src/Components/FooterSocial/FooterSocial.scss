@@ -1,0 +1,39 @@
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 2px solid #E2E4EB;
+    height: 100px;
+}
+
+.social__list {
+    display: flex;
+    align-items: center;
+}
+
+.social__item {
+    margin-right: 19px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nation {
+    display: flex;
+    align-items: center;
+}
+
+.nation__list {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.nation__item {
+    margin-right: 15px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
