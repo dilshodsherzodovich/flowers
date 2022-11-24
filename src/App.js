@@ -1,5 +1,6 @@
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import "./Style/GlobalStyles.scss";
 import Navbar from "./Components/Navbar/Navbar";
