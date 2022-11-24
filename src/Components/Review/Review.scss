@@ -101,6 +101,7 @@
     border-radius: 4px;
     position: relative;
     overflow: hidden;
+    color: #0093A2;
 
     &::before {
         content: "";
@@ -122,4 +123,51 @@
 
 .review__price-inner {
     color: #0093a2;
+}
+
+.review__wrapper {
+    position: relative;
+}
+
+.review__bt {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    left: -20px;
+    top: 130px;
+    background-color: #fff;
+    border: none;
+    
+
+    &::before {
+        width:  15px;
+        height: 15px;
+        display: block;
+        content: "";
+        background: url("../../assets/Icons/pause-icon.svg") no-repeat center center;
+        margin-left: 12px;
+    }
+}
+
+.review-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: absolute;
+    right: -20px;
+    top: 130px;
+    background-color: #fff;
+    border: none;
+    
+
+    &::before {
+        width:  15px;
+        height: 15px;
+        display: block;
+        content: "";
+        background: url("../../assets/Icons/pause-icon.svg") no-repeat center center;
+        margin-left: 12px;
+        transform: rotate(180deg);
+    }
 }

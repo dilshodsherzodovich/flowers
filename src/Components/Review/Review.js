@@ -12,6 +12,7 @@ const Review = () => {
                     <button className="review-btn">Оставить отзыв</button>
                 </div>
                 <div className="review__wrapper">
+                    <button className="review__bt review-prev"></button>
                     <div className="div review__inner">
                         <ul className="stars__list">
                             <li className="stars__item">
@@ -51,6 +52,7 @@ const Review = () => {
                     </div>
                     {/* eslint-disable-next-line */}
                     <img src={flower4} className="review__img" alt="review image" width={200} height={200} />
+                    <button className="review-next"></button>
                 </div>
                 <button type="button" className="review__button">Все отзывы</button>
             </div>
