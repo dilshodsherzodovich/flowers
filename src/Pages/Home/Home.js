@@ -6,19 +6,18 @@ import Review from "../../Components/Review/Review";
 import Services from "../../Components/Services/Services";
 import WhyRose from "../../Components/WhyRose/WhyRose";
 
-
 const Home = () => {
-    return (
-        <main>
-            <Services />
-            <Products />
-            <Review />
-            <News />
-            <Delivery />
-            <WhyRose />
-            <Map />
-        </main>
-    )
-}
+  return (
+    <main>
+      <Services />
+      <Products />
+      <Review />
+      <News />
+      <Delivery />
+      <WhyRose />
+      <Map />
+    </main>
+  );
+};
 
 export default Home;
