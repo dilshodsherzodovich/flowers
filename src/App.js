@@ -1,13 +1,13 @@
 import { Provider } from "react-redux";
 import { Route, Routes } from "react-router-dom";
+
 import "./App.css";
 import "./Style/GlobalStyles.scss";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Pages/Home/Home";
 import Blog from "./Pages/Blog/Blog";
 import NotFound from "./Pages/NotFound/NotFound";
-
-// style components
+import Catalog from "./Pages/Catalog/Catalog";
 import store from "./redux/store";
 import Reviews from "./Pages/Reviews/Reviews";
 import Contact from "./Pages/Contact/Contact";
@@ -23,6 +23,7 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/catalog" element={<Catalog />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
