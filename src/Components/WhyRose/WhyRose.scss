@@ -1,0 +1,48 @@
+.why {
+    padding: 70px 0;
+    background: url("../../assets/images/lavka.png") no-repeat center right;
+}
+
+.why__container {
+    display: flex;
+    align-items: center;
+}
+
+.why__img {
+    width: 178px;
+    height: 178px;
+    border-radius: 50%;
+    margin-left: 56px;
+    background: url("../../assets/images/why-image.png") no-repeat center center;
+    background-size: contain;
+}
+
+.why__title {
+    font-size: 40px;
+    line-height: 50px;
+    color: #222A46;
+}
+
+.why__desc {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 20px 0;
+    color: #353949;
+}
+
+.why__wrapper {
+    width: 873px;
+}
+
+.why__list {
+    list-style: circle;
+}
+
+.why__item {
+    margin-bottom: 15px;
+    color: #353949;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

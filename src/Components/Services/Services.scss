@@ -1,0 +1,56 @@
+.services {
+    margin: 30px 0 60px;
+}
+
+.services__list {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.services__item {
+    width: 235px;
+    height: 90px;
+    padding: 25px 10px 20px 55px;
+    text-align: center;
+    box-shadow: 1px 1px 5px rgba(34, 42, 70, 0.08);
+    position: relative;
+
+    &::before {
+        width: 40px;
+        height: 40px;
+        content: "";
+        position: absolute;
+        display: block;
+        background: url("../../assets/Icons/delivery.svg") no-repeat;
+        left: 10px;
+        top: 25px;
+    }
+}
+
+.services__item-title {
+    font-size: 14px;
+    line-height: 20px;
+    color: #222A46;
+    font-weight: normal;
+    width: 175px;
+}
+
+.services__item--discount::before {
+    background-image: url("../../assets/Icons/discount.svg");
+    left: 30px;
+    top: 17px;
+}
+
+.services__item--medallion::before {
+    background-image: url("../../assets/Icons/medallion.svg");
+    left: 15px;
+    top: 25px;
+}
+
+.services__item--prize::before {
+    background-image: url("../../assets/Icons/romance.svg");
+    left: 15px;
+    top: 20px;
+}

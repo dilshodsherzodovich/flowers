@@ -5,7 +5,7 @@ import contact from "../../assets/images/vcontact.svg";
 import person from "../../assets/images/person-icon.svg";
 import { useState } from "react";
 
-const Info = () => {
+const Info = (className) => {
   const [opened, setOpened] = useState(false);
 
   const handleBtnOpened = () => {
@@ -15,7 +15,7 @@ const Info = () => {
   return (
     <div className="info">
       <div className="container info__container">
-        <time className="info__time">Пн-Сб: 8:00–20:00 Вс: 9:00–20:00</time>
+        <time className={`info__time ` + className}>Пн-Сб: 8:00–20:00 Вс: 9:00–20:00</time>
         <ul className="info__list">
           <li>
             <Link className="info__btn">Доставка</Link>

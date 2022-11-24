@@ -1,9 +1,18 @@
+import Delivery from "../../Components/Delivery/Delivery";
+import Map from "../../Components/Map/Map";
+import Review from "../../Components/Review/Review";
+import Services from "../../Components/Services/Services";
+import WhyRose from "../../Components/WhyRose/WhyRose";
+
+
 const Home = () => {
     return (
         <main>
-            <div>
-                
-            </div>
+            <Services />
+            <Review />
+            <Delivery />
+            <WhyRose />
+            <Map />
         </main>
     )
 }

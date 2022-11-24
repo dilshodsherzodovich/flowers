@@ -1,0 +1,125 @@
+.review {
+    padding: 80px 0;
+    background-color: #F2F6F6;
+}
+
+.review__content {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 5px 40px 5px;
+}
+
+.review__title {
+    color:#222A46;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+.review__wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 45px 39px 40px 50px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.review-btn {
+    padding: 0;
+    border: none;
+    color: #0093A2;
+    padding: 13px 30px;
+    border: 1px solid #0093A2;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.review__img {
+    border-radius: 50%;
+    border: 3px solid #0093A2;
+    padding: 4px;
+}
+
+.review__inner {
+    width: 808px;
+}
+
+.stars__list {
+    display: flex;
+    margin-bottom: 10px;
+
+    .stars__item {
+        margin-right: 10px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        .stars__btn {
+            padding: 0;
+            border: none;
+            background-color: transparent;
+            i {
+                color: #FFA500;
+            }
+        }
+    }
+}
+
+.review__subtitle {
+    margin-bottom: 15px;
+    color:#222A46;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.review__desc {
+    color: 
+    #222A46;
+    font-size: 16px;
+    line-height: 22px;
+
+    margin-bottom: 40px;
+}
+
+.price__wrapper {
+    display: flex;
+}
+
+.review__price {
+    margin-right: 10px;
+}
+
+.review__button {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    border: none;
+    background-color: #fff;
+    padding: 13px 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background: #0d6dfde8;
+        width: 8px;
+        top: 0;
+        bottom: 0;
+        left: -32px;
+        transform: rotate(-16deg);
+        filter: blur(6px);
+    }
+
+    &:hover::before {
+        left: calc(100% + 32px);
+        transition: 0.75s;
+    }
+}
+
+.review__price-inner {
+    color: #0093a2;
+}
