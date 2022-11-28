@@ -1,0 +1,187 @@
+@use "../../Style/colors.scss" as colors;
+.catalog-flowers {
+  padding-bottom: 60px;
+  * {
+    box-sizing: border-box;
+  }
+  .header-section {
+    padding-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .section-header {
+      margin: 0;
+    }
+    .sort-box {
+      display: flex;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: colors.$blueTextColor;
+      label {
+        margin-right: 20px;
+        color: colors.$cardFooterText;
+        padding-top: 8px;
+      }
+      .dropdown-menu {
+        position: relative;
+        .active-menu {
+          cursor: pointer;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border: 1px solid colors.$boldGrayBorderColor;
+          padding: 8px 10px;
+          border-radius: 5px;
+          width: 200px;
+          p {
+            margin-right: 15px;
+          }
+        }
+        .dropped-menu {
+          position: absolute;
+          z-index: 6;
+          background-color: #fff;
+          padding: 15px 10px;
+          margin-top: 5px;
+          border: 1px solid colors.$grayBorderColor;
+          border-radius: 5px;
+          box-shadow: 0px 10px 30px rgba(34, 42, 70, 0.1);
+          p {
+            cursor: pointer;
+            line-height: 24px;
+            &.active {
+              color: colors.$greenBtnColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  .flowers-count-filters {
+    padding-left: 8px;
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    .single-count-item {
+      cursor: pointer;
+      padding: 8px 15px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid colors.$boldGrayBorderColor;
+      border-radius: 5px;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      &:hover,
+      &.active {
+        background: colors.$mainGrayBackground;
+        p {
+          color: colors.$greenBtnColor;
+        }
+        span {
+          display: flex;
+        }
+      }
+      p {
+        color: colors.$grayTextColor;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        margin-right: 10px;
+      }
+      span {
+        display: none;
+        align-items: center;
+        i {
+          font-size: 16px;
+          font-weight: 700;
+          cursor: pointer;
+        }
+      }
+    }
+    .show-more-btn {
+      border: 1px solid colors.$greenBtnColor;
+      padding: 8px 15px;
+      display: flex;
+      color: colors.$greenBtnColor;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      cursor: pointer;
+      p {
+        margin-right: 10px;
+        line-height: 20px;
+      }
+    }
+  }
+  .flowers-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+  }
+  .awaiting-btn {
+    margin-left: 8px;
+    width: 100%;
+    display: block;
+    padding: 12px 0;
+    background: colors.$grayBackGround;
+    border-radius: 5px;
+    border: none;
+    font-weight: 700;
+    font-size: 18px;
+    margin-top: 30px;
+    line-height: 26px;
+  }
+  .preOrder-section {
+    margin-top: 30px;
+  }
+  .footer-content {
+    padding-left: 8px;
+    margin-top: 60px;
+    .section-header {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      color: colors.$blueTextColor;
+      margin-bottom: 20px;
+    }
+    .section-subheader {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      color: colors.$blueTextColor;
+      margin-bottom: 20px;
+      margin-top: 40px;
+    }
+    p {
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 26px;
+      color: colors.$cardDescriptionText;
+    }
+    ul {
+      list-style: unset;
+      margin-top: 20px;
+      li {
+        margin-left: 30px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: colors.$cardDescriptionText;
+      }
+    }
+  }
+  .delivery-date {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+
+    color: #505567;
+  }
+}

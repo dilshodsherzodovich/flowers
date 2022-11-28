@@ -1,18 +1,72 @@
 import React from "react";
 import classNames from "classnames";
 import { v4 as uuid } from "uuid";
+import { useSelector, useDispatch } from "react-redux";
 
 import "./CatalogFilters.scss";
 
+//import functions
+import {
+  setActiveColor,
+  setActiveFlower,
+  setMaxCost,
+  setMinCost,
+  addDiameter,
+  removeDiameter,
+  addLength,
+  removeLength,
+  addIngredient,
+  removeIngredient,
+  addPersonal,
+  removePersonal,
+} from "./filters_slice";
+
 function CatalogFilters() {
+  const dispatch = useDispatch();
+  const {
+    activeFlower,
+    activeColor,
+    minCost,
+    maxCost,
+    activeDiameter,
+    activeLength,
+    activeIngredients,
+    activePersonals,
+  } = useSelector((state) => state.filter);
+
+  const handleSetStates = (value, setState = Function) => {
+    dispatch(setState(value));
+  };
+
+  const handleArrayStates = (
+    array,
+    item,
+    addState = Function,
+    removeState = Function
+  ) => {
+    const index = array.findIndex((i) => i === item);
+    console.log(index);
+    if (index >= 0) {
+      return dispatch(removeState(index));
+    } else {
+      dispatch(addState(item));
+    }
+  };
+
   const renderBouquetFilters = () => {
     const roses = ["Местные розы", "Эквадорские розы", "Кенийские розы"];
     return roses.map((item) => {
       const roseClassName = classNames("rose-item", {
-        active: item === "Местные розы",
+        active: item === activeFlower,
       });
       return (
-        <p key={uuid()} className={roseClassName}>
+        <p
+          onClick={() => {
+            handleSetStates(item, setActiveFlower);
+          }}
+          key={uuid()}
+          className={roseClassName}
+        >
           {item}
         </p>
       );
@@ -39,10 +93,16 @@ function CatalogFilters() {
 
     return colors.map((item) => {
       const colorClassNames = classNames("color-item", {
-        active: item === "red",
+        active: item === activeColor,
       });
       return (
-        <div key={uuid()} className={colorClassNames}>
+        <div
+          onClick={() => {
+            handleSetStates(item, setActiveColor);
+          }}
+          key={uuid()}
+          className={colorClassNames}
+        >
           <div style={{ backgroundColor: item }} className="color"></div>
         </div>
       );
@@ -53,10 +113,21 @@ function CatalogFilters() {
     const filters = ["До 25 см", "26-40 см", "41-55 см", "Более 55 см"];
     return filters.map((item) => {
       const filterClassName = classNames("diameter-item rodeo", {
-        active: item === "До 25 см",
+        active: activeDiameter.includes(item),
       });
       return (
-        <div key={uuid()} className={filterClassName}>
+        <div
+          onClick={() => {
+            handleArrayStates(
+              activeDiameter,
+              item,
+              addDiameter,
+              removeDiameter
+            );
+          }}
+          key={uuid()}
+          className={filterClassName}
+        >
           <span>
             <i class="fa-solid fa-check"></i>
           </span>
@@ -70,10 +141,16 @@ function CatalogFilters() {
     const filters = ["До 45 см", "46-60 см", "61-75 см", "Более 75 см"];
     return filters.map((item) => {
       const heightClassName = classNames("height-item rodeo", {
-        active: item === "До 45 см",
+        active: activeLength.includes(item),
       });
       return (
-        <div key={uuid()} className={heightClassName}>
+        <div
+          onClick={() => {
+            handleArrayStates(activeLength, item, addLength, removeLength);
+          }}
+          key={uuid()}
+          className={heightClassName}
+        >
           <span>
             <i class="fa-solid fa-check"></i>
           </span>
@@ -95,10 +172,21 @@ function CatalogFilters() {
 
     return filters.map((item) => {
       const ingrClassName = classNames("ingr-item rodeo", {
-        active: item === "Тюльпаны",
+        active: activeIngredients.includes(item),
       });
       return (
-        <div key={uuid()} className={ingrClassName}>
+        <div
+          onClick={() => {
+            handleArrayStates(
+              activeIngredients,
+              item,
+              addIngredient,
+              removeIngredient
+            );
+          }}
+          key={uuid()}
+          className={ingrClassName}
+        >
           <span>
             <i class="fa-solid fa-check"></i>
           </span>
@@ -120,10 +208,21 @@ function CatalogFilters() {
 
     return filters.map((item) => {
       const specialClassNames = classNames("special-item rodeo", {
-        active: item === "Маме",
+        active: activePersonals.includes(item),
       });
       return (
-        <div key={uuid()} className={specialClassNames}>
+        <div
+          onClick={() => {
+            handleArrayStates(
+              activePersonals,
+              item,
+              addPersonal,
+              removePersonal
+            );
+          }}
+          key={uuid()}
+          className={specialClassNames}
+        >
           <span>
             <i class="fa-solid fa-check"></i>
           </span>
@@ -143,8 +242,20 @@ function CatalogFilters() {
       <div className="cost-filters">
         <h5 className="subheader">Цена</h5>
         <div className="inputs-group">
-          <input type="number" />
-          <input type="number" />
+          <input
+            value={minCost}
+            onChange={(e) => {
+              handleSetStates(e.target.value, setMinCost);
+            }}
+            type="number"
+          />
+          <input
+            value={maxCost}
+            onChange={(e) => {
+              handleSetStates(e.target.value, setMaxCost);
+            }}
+            type="number"
+          />
         </div>
         <div className="cost-progress">
           <div className="under-box">

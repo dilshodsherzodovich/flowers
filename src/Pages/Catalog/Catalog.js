@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CatalogFlowers from "../../Components/CatalogFlowers/CatalogFlowers";
 import CatalogFilters from "../../Components/CataogFilters/CatalogFilters";
 
 import "./Catalog.scss";
@@ -18,8 +19,13 @@ function Catalog() {
           <Link to="/catalog">Букеты из роз</Link>
         </span>
       </p>
-      <div className="catalog-filters-section">
-        <CatalogFilters />
+      <div className="catalog-main">
+        <div className="catalog-filters-section">
+          <CatalogFilters />
+        </div>
+        <div className="catalog-flowers-section">
+          <CatalogFlowers />
+        </div>
       </div>
     </div>
   );

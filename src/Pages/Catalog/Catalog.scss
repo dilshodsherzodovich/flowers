@@ -1,5 +1,17 @@
 .catalog {
+  * {
+    box-sizing: border-box;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+  }
   &-filters-section {
+    margin-top: 22px;
+    width: 26%;
+  }
+  &-flowers-section {
+    width: 73%;
     margin-top: 22px;
   }
 }
