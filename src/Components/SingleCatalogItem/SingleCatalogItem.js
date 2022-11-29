@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { useState } from "react";
 import { v4 as uuid } from "uuid";
+import { Link } from "react-router-dom";
 
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
@@ -16,6 +17,7 @@ function SingleCatalogItem({
   description,
   preOrder,
   review_avg,
+  id,
 }) {
   const [activeSize, setActiveSize] = useState("");
 
@@ -68,8 +70,9 @@ function SingleCatalogItem({
                 <i className="fa-solid fa-heart"></i>
               </div>
               <div className="img-box">
-                <i class="fa-regular fa-eye"></i>
-                <i className="fa-solid fa-eye"></i>
+                <Link to={`/flower/${id}`}>
+                  <i class="fa-regular fa-eye"></i>
+                </Link>
               </div>
             </div>
             <div className="description-box">

@@ -1,0 +1,321 @@
+@use "../../Style/colors.scss" as colors;
+@import url("https://fonts.cdnfonts.com/css/tt-norms-pro");
+
+.flowerCard {
+  margin-top: 30px;
+
+  .flower-full-details {
+    display: flex;
+    justify-content: space-between;
+  }
+  &-imgBox {
+    width: 39%;
+    .images {
+      .activeImage {
+        img {
+          width: 100%;
+          height: 400px;
+        }
+      }
+      .bottom-images {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 8px;
+        &__item {
+          cursor: pointer;
+          width: 23%;
+          border: 2px solid transparent;
+          img {
+            width: 100%;
+          }
+          &.active {
+            border-color: colors.$pinkBtnColor;
+          }
+        }
+      }
+    }
+    .flower-details {
+      margin-top: 20px;
+      p {
+        font-weight: 400;
+        line-height: 22px;
+        color: colors.$blueTextColor;
+      }
+    }
+  }
+  &-detailsBox {
+    padding: 20px;
+    border: 1px solid colors.$grayBackGround;
+    width: 39%;
+    .box-header {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      color: colors.$blueTextColor;
+      margin-bottom: 10px;
+    }
+    .stars {
+      margin-bottom: 10px;
+      i {
+        margin-right: 5px;
+        color: colors.$greenBtnColor;
+      }
+      span {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        span {
+          color: colors.$greenBtnColor;
+        }
+      }
+    }
+    .mini-infos {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+      &__item {
+        width: 34%;
+        span,
+        label {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: colors.$cardHeaderText;
+        }
+        span {
+          font-weight: 700;
+        }
+      }
+    }
+    .info-header {
+      font-weight: 400;
+      font-size: 14px;
+      margin-bottom: 7px;
+      margin-top: 10px;
+      line-height: 20px;
+      color: colors.$cardDescriptionText;
+    }
+    .info-btns {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      button {
+        background: none;
+        border: 1px solid colors.$boldGrayBorderColor;
+        border-radius: 5px;
+        padding: 6px 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        &.active {
+          background: colors.$greenBtnColor;
+          color: #fff;
+        }
+      }
+    }
+    .price-infos {
+      margin-top: 20px;
+      display: flex;
+      .main-prices {
+        margin-right: 15px;
+        p {
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 30px;
+          color: colors.$blueTextColor;
+        }
+        del {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 18px;
+          color: colors.$cardFooterText;
+        }
+      }
+      .discount-info {
+        position: relative;
+        i {
+          font-size: 14px;
+          cursor: pointer;
+          &:hover {
+            & + .info-floating-box {
+              display: block;
+            }
+          }
+        }
+        margin-top: 5px;
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+        color: colors.$grayTextColor;
+        & > p {
+          margin-right: 10px;
+        }
+        .info-floating-box {
+          display: none;
+          position: absolute;
+          top: -30px;
+          right: -140%;
+          background: #fff;
+          z-index: 3;
+          padding: 10px 15px;
+          border: 1px solid colors.$grayBorderColor;
+          box-shadow: 0px 10px 30px rgba(34, 42, 70, 0.1);
+          border-radius: 5px;
+        }
+      }
+    }
+    .btns-box {
+      margin-bottom: 50px;
+      margin-top: 20px;
+      display: flex;
+      button {
+        font-weight: 400;
+        font-size: 16px;
+        padding: 10px 15px;
+        line-height: 22px;
+        color: colors.$cardHeaderText;
+        border: 1px solid colors.$boldGrayBorderColor;
+        border-radius: 5px;
+        margin-right: 15px;
+        &:nth-child(1) {
+          display: flex;
+          align-items: center;
+          background: none;
+          span {
+            &:nth-child(2) {
+              margin: 0 35px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          position: relative;
+          background: colors.$pinkBtnColor;
+          color: #fff;
+          padding: 12px 40px;
+          border-color: colors.$pinkBtnColor;
+          i {
+            margin-right: 10px;
+          }
+          .one-click__btn {
+            position: absolute;
+            color: colors.$greenBtnColor;
+            border-bottom: 2px dashed colors.$greenBtnColor;
+            bottom: -70%;
+            left: 20%;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        &:nth-child(3) {
+          border-radius: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: colors.$mainGrayBackground;
+          &:hover {
+            i {
+              color: colors.$greenBtnColor;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+    .composition-infos {
+      h4 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: colors.$cardHeaderText;
+      }
+      .composition-item {
+        display: flex;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        align-items: center;
+        label {
+          margin-right: 15px;
+
+          color: colors.$grayTextColor;
+        }
+        p {
+          color: colors.$cardHeaderText;
+        }
+      }
+    }
+  }
+  &-extraBox {
+    h5 {
+      font-weight: 700;
+      margin-bottom: 5px;
+      font-size: 16px;
+      line-height: 22px;
+      color: colors.$cardHeaderText;
+    }
+    width: 19%;
+    .extra-box-inner {
+      border: 1px solid colors.$grayBackGround;
+    }
+    .delivery-box {
+      border-bottom: 1px solid colors.$grayBackGround;
+      padding: 20px;
+
+      ul {
+        margin-bottom: 5px;
+        list-style: inside;
+        li {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: colors.$cardHeaderText;
+        }
+      }
+      a {
+        text-decoration: underline;
+        color: colors.$greenBtnColor;
+      }
+    }
+    .payment-box {
+      border-bottom: 1px solid colors.$grayBackGround;
+      padding: 20px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: colors.$grayTextColor;
+      .paytment-types {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 5px;
+        div {
+          width: 23%;
+          padding: 5px;
+          border: 1px solid colors.$grayBackGround;
+          border-radius: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          img {
+            width: 25px;
+          }
+        }
+      }
+    }
+    .last-box {
+      padding: 20px;
+      p {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: colors.$grayTextColor;
+      }
+    }
+  }
+}
