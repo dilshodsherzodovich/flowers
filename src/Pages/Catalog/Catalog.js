@@ -5,26 +5,29 @@ import CatalogFilters from "../../Components/CataogFilters/CatalogFilters";
 
 import "./Catalog.scss";
 
-function Catalog() {
+function Catalog({ page }) {
   console.log("Render");
 
   return (
     <div className="catalog container">
-      <p className="section-router">
-        <span>
-          <Link to="/">Главная</Link>
-        </span>
-        <span></span>
-        <span className="active">
-          <Link to="/catalog">Букеты из роз</Link>
-        </span>
-      </p>
+      {page === "category" ? null : (
+        <p className="section-router">
+          <span>
+            <Link to="/">Главная</Link>
+          </span>
+          <span></span>
+          <span className="active">
+            <Link to="/catalog">Букеты из роз</Link>
+          </span>
+        </p>
+      )}
+
       <div className="catalog-main">
         <div className="catalog-filters-section">
           <CatalogFilters />
         </div>
         <div className="catalog-flowers-section">
-          <CatalogFlowers />
+          <CatalogFlowers page={page} />
         </div>
       </div>
     </div>

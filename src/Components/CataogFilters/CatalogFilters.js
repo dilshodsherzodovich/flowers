@@ -55,14 +55,14 @@ function CatalogFilters() {
 
   const renderBouquetFilters = () => {
     const roses = ["Местные розы", "Эквадорские розы", "Кенийские розы"];
-    return roses.map((item) => {
+    return roses.map((item, index) => {
       const roseClassName = classNames("rose-item", {
-        active: item === activeFlower,
+        active: index + 1 === activeFlower,
       });
       return (
         <p
           onClick={() => {
-            handleSetStates(item, setActiveFlower);
+            handleSetStates(index + 1, setActiveFlower);
           }}
           key={uuid()}
           className={roseClassName}

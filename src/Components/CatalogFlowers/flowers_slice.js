@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { useHttp } from "../../hooks/useHttp";
+import { apiBaseUrl } from "../../config";
 
 const initialState = {
   flowers: [],
@@ -12,9 +13,7 @@ export const fetchFlowers = createAsyncThunk(
   "flowers/fetchFlowers",
   async () => {
     const { request } = useHttp();
-    return await request(
-      "https://minimer07.pythonanywhere.com/products/v1/Product/"
-    );
+    return await request(`${apiBaseUrl}/products/v1/product_api_view/`);
   }
 );
 

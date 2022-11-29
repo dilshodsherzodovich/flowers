@@ -2,6 +2,7 @@ import classNames from "classnames";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { v4 as uuid } from "uuid";
+import { createSelector } from "reselect";
 
 // import components
 import SingleCatalogItem from "../SingleCatalogItem/SingleCatalogItem";
@@ -18,12 +19,26 @@ import {
 //imort style files
 import "./CatalogFlowers.scss";
 
-function CatalogFlowers() {
+function CatalogFlowers({ page }) {
   const dispatch = useDispatch();
   const { flowers, loading, activeSortFilter, activeCountFlowers } =
     useSelector((state) => state.flowers);
 
   const [showFilters, setShowFilters] = useState(false);
+
+  const selectedNewsFilter = createSelector(
+    (state) => state.flowers.flowers,
+    (state) => state.filter.activeFlower,
+    (flowers, activeFlower) => {
+      if (activeFlower === null) {
+        return flowers;
+      } else {
+        return flowers.filter((item) => item.category === activeFlower);
+      }
+    }
+  );
+
+  const visibleFlowers = useSelector(selectedNewsFilter);
 
   useEffect(() => {
     dispatch(fetchFlowers());
@@ -39,9 +54,13 @@ function CatalogFlowers() {
       return <h1>Error</h1>;
     }
 
-    return array.map((item) => {
-      return <SingleCatalogItem key={uuid()} {...item} />;
-    });
+    if (array.length > 0) {
+      return array.map((item) => {
+        return <SingleCatalogItem key={uuid()} {...item} />;
+      });
+    } else {
+      return <h1>Nothing found</h1>;
+    }
   };
 
   const renderDropdown = () => {
@@ -116,7 +135,11 @@ function CatalogFlowers() {
   return (
     <div className="catalog-flowers">
       <div className="header-section">
-        <h1 className="section-header">Букеты из роз</h1>
+        {page === "category" ? (
+          <h1 className="section-header"></h1>
+        ) : (
+          <h1 className="section-header">Букеты из роз</h1>
+        )}
         <div className="sort-box">
           <label>Сортировать:</label>
           <div className="dropdown-menu">
@@ -144,11 +167,18 @@ function CatalogFlowers() {
         </div>
       </div>
 
-      <div className="flowers-section">{renderFlowers(flowers)}</div>
+      <div className="flowers-section">{renderFlowers(visibleFlowers)}</div>
 
       <button className="awaiting-btn">Ожидаем поступление</button>
 
       <div className="preOrder-section">{renderPreOrder(flowers)}</div>
+
+      <div className="show-all-btn">
+        <button>
+          <i class="fa-solid fa-rotate-right"></i>
+          <p>Показать еще</p>
+        </button>
+      </div>
 
       <div className="footer-content">
         <h1 className="section-header">

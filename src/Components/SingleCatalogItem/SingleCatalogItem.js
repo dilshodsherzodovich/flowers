@@ -15,6 +15,7 @@ function SingleCatalogItem({
   price,
   description,
   preOrder,
+  review_avg,
 }) {
   const [activeSize, setActiveSize] = useState("");
 
@@ -94,7 +95,10 @@ function SingleCatalogItem({
               <div className="ratings">
                 <i class="fa-solid fa-star"></i>
                 <span>
-                  <span>4.0 </span>(15 отзывов)
+                  <span>
+                    {review_avg.star__avg ? review_avg.star__avg : null}{" "}
+                  </span>
+                  ({review_avg.star__count} отзывов)
                 </span>
               </div>
               <div className="ratings-delivery">

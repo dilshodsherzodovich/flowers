@@ -12,6 +12,7 @@ import store from "./redux/store";
 import Reviews from "./Pages/Reviews/Reviews";
 import Contact from "./Pages/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
+import Categories from "./Pages/Categories/Categories";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/reviews" element={<Reviews />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/catalog" element={<Catalog />} />
+          <Route path="/categories" element={<Categories />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />

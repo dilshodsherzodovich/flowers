@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  activeFlower: "Местные розы",
+  activeFlower: null,
   minCost: "",
   maxCost: "",
   activeColor: "",
