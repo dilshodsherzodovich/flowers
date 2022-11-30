@@ -1,0 +1,90 @@
+@use "../../Style/colors.scss" as colors;
+.review-carousel {
+  position: relative;
+  * {
+    box-sizing: border-box;
+  }
+
+  .single-review {
+    padding: 40px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 235px;
+    .left-side {
+      width: 70%;
+      .star-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
+        i {
+          color: orange;
+          margin-right: 10px;
+        }
+      }
+      h4.review-owner {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 26px;
+        color: colors.$blueTextColor;
+        margin-bottom: 15px;
+      }
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: colors.$blueTextColor;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 3; /* number of lines to show */
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+      }
+    }
+    .right-side {
+      vertical-align: middle;
+      .review-img-box {
+        width: 155px;
+        height: 155px;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid colors.$greenBtnColor;
+        img {
+          width: 140px;
+          height: 140px;
+          border-radius: 100%;
+        }
+      }
+    }
+  }
+  .nav-prev,
+  .nav-next {
+    display: inline-block;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.15);
+    top: calc((235px / 2) + -20px);
+    background: #fff;
+    position: absolute;
+    z-index: 3;
+    cursor: pointer;
+  }
+  .nav-prev {
+    left: -20px;
+  }
+  .nav-next {
+    right: -20px;
+  }
+}
+.owl-stage-outer {
+  box-shadow: 0px 4px 15px rgba(34, 42, 70, 0.08) !important;
+  border: 1px solid colors.$grayBackGround;
+  border-radius: 10px;
+}
