@@ -3,6 +3,13 @@
 
 .flowerCard {
   margin-top: 30px;
+  p,
+  h1,
+  h2,
+  h3,
+  button {
+    font-family: "TT Norms Pro", sans-serif;
+  }
 
   .flower-full-details {
     display: flex;
@@ -315,6 +322,37 @@
         font-size: 14px;
         line-height: 20px;
         color: colors.$grayTextColor;
+      }
+    }
+  }
+
+  .flowers-reviews {
+    margin-bottom: 60px;
+    margin-top: 30px;
+    .header-box {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 40px;
+        color: colors.$blueTextColor;
+      }
+      button {
+        padding: 12px 20px;
+        border: 1px solid colors.$greenBtnColor;
+        background: #fff;
+        border-radius: 5px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: colors.$greenBtnColor;
+        &:hover {
+          background-color: colors.$greenBtnColor;
+          color: #fff;
+        }
       }
     }
   }

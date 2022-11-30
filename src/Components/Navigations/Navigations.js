@@ -16,8 +16,14 @@ const Navigations = () => {
       <div className="container nav__container">
         <Link className="nav__link">АКЦИИ</Link>
         <div>
-          {navigation.map((item) => {
-            return <button className="nav__btn">{item}</button>;
+          {navigation.map((item, index) => {
+            return (
+              <button className="nav__btn">
+                <Link to={index % 2 === 0 ? "/catalog" : "/categories"}>
+                  {item}
+                </Link>
+              </button>
+            );
           })}
         </div>
         <div>

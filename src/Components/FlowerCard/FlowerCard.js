@@ -24,6 +24,8 @@ import {
   setActiveLengthBtnIndex,
   setActivePackageBtnIndex,
 } from "./singleFlower_slice";
+import ReviewOwlCarousel from "../ReviewOwlCarousel/ReviewOwlCarousel";
+import RecFlowers from "../RecFlowers/RecFlowers";
 
 function FlowerCard({ id }) {
   const {
@@ -92,7 +94,10 @@ function FlowerCard({ id }) {
           }}
           className={imgClassName}
         >
-          <img src={`${apiBaseUrl + item}`} alt="" />
+          <img
+            src={`${"https://minimer07.pythonanywhere.com" + item}`}
+            alt=""
+          />
         </div>
       );
     });
@@ -159,7 +164,10 @@ function FlowerCard({ id }) {
           <div className="images">
             <div className="activeImage">
               <img
-                src={`${apiBaseUrl + flowersImage[activeImageIndex]}`}
+                src={`${
+                  "https://minimer07.pythonanywhere.com" +
+                  flowersImage[activeImageIndex]
+                }`}
                 alt=""
               />
             </div>
@@ -171,7 +179,7 @@ function FlowerCard({ id }) {
           </div>
         </div>
         <div className="flowerCard-detailsBox">
-          <h1 className="box-header">Букет малиновых роз</h1>
+          <h1 className="box-header">{flower.title}</h1>
           <div className="stars">
             <i class="fa-solid fa-star"></i>
             <span>
@@ -295,6 +303,16 @@ function FlowerCard({ id }) {
   return (
     <div className="flowerCard">
       <div className="flower-full-details">{renderFlower()}</div>
+      <div className="flowers-reviews">
+        <div className="header-box">
+          <h3>Отзывы</h3>
+          <button>Все отзывы</button>
+        </div>
+        <ReviewOwlCarousel id={flower.id} />
+      </div>
+      <div className="recommended-flowers">
+        <RecFlowers category={flower.category} />
+      </div>
     </div>
   );
 }

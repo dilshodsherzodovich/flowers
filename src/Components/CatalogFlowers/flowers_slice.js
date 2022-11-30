@@ -13,7 +13,7 @@ export const fetchFlowers = createAsyncThunk(
   "flowers/fetchFlowers",
   async () => {
     const { request } = useHttp();
-    return await request(`${apiBaseUrl}/products/v1/product_api_view/`);
+    return await request(`${apiBaseUrl}products/v1/product_api_view/`);
   }
 );
 
