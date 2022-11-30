@@ -136,6 +136,7 @@ function CatalogFlowers({ page }) {
     <div className="catalog-flowers">
       <div className="header-section">
         {page === "category" ? (
+          // eslint-disable-next-line
           <h1 className="section-header"></h1>
         ) : (
           <h1 className="section-header">Букеты из роз</h1>

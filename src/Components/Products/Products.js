@@ -3,7 +3,7 @@ import "./Products.scss";
 // images
 
 import flower4 from "../../assets/images/flower4.png";
-import flower5 from "../../assets/images/flower5.png";
+// import flower5 from "../../assets/images/flower5.png";
 
 const Products = () => {
 
