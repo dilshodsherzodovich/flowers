@@ -24,6 +24,7 @@ import {
   setActiveLengthBtnIndex,
   setActivePackageBtnIndex,
 } from "./singleFlower_slice";
+import ReviewOwlCarousel from "../ReviewOwlCarousel/ReviewOwlCarousel";
 
 function FlowerCard({ id }) {
   const {
@@ -171,7 +172,7 @@ function FlowerCard({ id }) {
           </div>
         </div>
         <div className="flowerCard-detailsBox">
-          <h1 className="box-header">Букет малиновых роз</h1>
+          <h1 className="box-header">{flower.title}</h1>
           <div className="stars">
             <i class="fa-solid fa-star"></i>
             <span>
@@ -295,6 +296,13 @@ function FlowerCard({ id }) {
   return (
     <div className="flowerCard">
       <div className="flower-full-details">{renderFlower()}</div>
+      <div className="flowers-reviews">
+        <div className="header-box">
+          <h3>Отзывы</h3>
+          <button>Все отзывы</button>
+        </div>
+        <ReviewOwlCarousel />
+      </div>
     </div>
   );
 }
