@@ -11,8 +11,7 @@
 
 .services__item {
     width: 220px;
-    height: 90px;
-    padding: 20px 0px 0px 20px;
+    height: 110px;
     text-align: center;
     box-shadow: 1px 1px 5px rgba(34, 42, 70, 0.08);
     position: relative;
@@ -24,7 +23,7 @@
         position: absolute;
         display: block;
         background: url("../../assets/Icons/delivery.svg") no-repeat;
-        left: 10px;
+        left: 5px;
         top: 25px;
     }
 }
@@ -35,17 +34,19 @@
     color: #222A46;
     font-weight: normal;
     width: 175px;
+    margin-top: 30px;
+    margin-left: 40px;
 }
 
 .services__item--discount::before {
     background-image: url("../../assets/Icons/discount.svg");
     left: 30px;
-    top: 17px;
+    top: 20px;
 }
 
 .services__item--medallion::before {
     background-image: url("../../assets/Icons/medallion.svg");
-    left: 15px;
+    left: 0px;
     top: 25px;
 }
 
