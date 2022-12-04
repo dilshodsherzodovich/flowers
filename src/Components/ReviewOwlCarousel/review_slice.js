@@ -33,6 +33,6 @@ const reviewSlice = createSlice({
       });
   },
 });
-
+// eslint-disable-next-line
 const { reducer, actions } = reviewSlice;
 export default reducer;

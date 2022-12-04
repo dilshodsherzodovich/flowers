@@ -1,6 +1,7 @@
 import classNames from "classnames";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+// eslint-disable-next-line
 import { apiBaseUrl } from "../../config";
 import { Link } from "react-router-dom";
 
@@ -160,9 +161,9 @@ function FlowerCard({ id }) {
 
     return (
       <>
-        <div className="flowerCard-imgBox">
+        <div className="flower-card-img-box">
           <div className="images">
-            <div className="activeImage">
+            <div className="active-image">
               <img
                 src={`${
                   "https://minimer07.pythonanywhere.com" +
@@ -178,7 +179,8 @@ function FlowerCard({ id }) {
             <p>{flower.description}</p>
           </div>
         </div>
-        <div className="flowerCard-detailsBox">
+        
+        <div className="flower-card-details-box">
           <h1 className="box-header">{flower.title}</h1>
           <div className="stars">
             <i class="fa-solid fa-star"></i>
@@ -270,7 +272,8 @@ function FlowerCard({ id }) {
             <div className="compositions">{renderCompositions()}</div>
           </div>
         </div>
-        <div className="flowerCard-extraBox">
+        
+        <div className="flower-card-extra-box">
           <div className="extra-box-inner">
             <div className="delivery-box">
               <h5 className="delivery-header">Доставка</h5>
@@ -301,7 +304,7 @@ function FlowerCard({ id }) {
   };
 
   return (
-    <div className="flowerCard">
+    <div className="flower-card">
       <div className="flower-full-details">{renderFlower()}</div>
       <div className="flowers-reviews">
         <div className="header-box">

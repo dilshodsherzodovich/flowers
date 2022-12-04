@@ -4,10 +4,8 @@ import { createSelector } from "reselect";
 
 //import functions
 import { fetchFlowers } from "../CatalogFlowers/flowers_slice";
-import ReviewOwlCarousel from "../ReviewOwlCarousel/ReviewOwlCarousel";
 
 //import owl-carosuel
-import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
@@ -26,6 +24,7 @@ function RecFlowers({ category }) {
     }
   );
 
+  // eslint-disable-next-line
   const visibleFlowers = useSelector(selectedFlowers);
 
   return <div className="rec-flowers"></div>;

@@ -16,7 +16,6 @@ import { createSelector } from "reselect";
 
 // import style files
 import "./ReviewOwlCarousel.scss";
-import SingleCatalogItem from "../SingleCatalogItem/SingleCatalogItem";
 
 function ReviewOwlCarousel({ id }) {
   const selectedReviews = createSelector(
