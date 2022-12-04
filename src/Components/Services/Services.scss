@@ -10,7 +10,7 @@
 }
 
 .services__item {
-    width: 220px;
+    width: 275px;
     height: 110px;
     text-align: center;
     box-shadow: 1px 1px 5px rgba(34, 42, 70, 0.08);
@@ -23,8 +23,8 @@
         position: absolute;
         display: block;
         background: url("../../assets/Icons/delivery.svg") no-repeat;
-        left: 5px;
-        top: 25px;
+        left: 10px;
+        top: 35px;
     }
 }
 
@@ -34,24 +34,24 @@
     color: #222A46;
     font-weight: normal;
     width: 175px;
-    margin-top: 30px;
-    margin-left: 40px;
+    margin-top: 40px;
+    margin-left: 50px;
 }
 
 .services__item--discount::before {
     background-image: url("../../assets/Icons/discount.svg");
     left: 30px;
-    top: 20px;
+    top: 30px;
 }
 
 .services__item--medallion::before {
     background-image: url("../../assets/Icons/medallion.svg");
     left: 0px;
-    top: 25px;
+    top: 35px;
 }
 
 .services__item--prize::before {
     background-image: url("../../assets/Icons/romance.svg");
     left: 15px;
-    top: 20px;
+    top: 30px;
 }
