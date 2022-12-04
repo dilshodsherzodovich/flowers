@@ -1,0 +1,22 @@
+.carousel {
+    width: 1070px;
+    height: 250px;
+}
+
+.intro {
+    overflow: hidden;
+}
+
+.intro__container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.intro__title {
+    font-size: 18px;
+    line-height: 26px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 10px;
+}

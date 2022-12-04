@@ -1,7 +1,9 @@
 @use "./colors.scss" as colors;
 
 .container {
-  padding: 0 145px;
+  max-width: 1430px;
+  padding: 0 30px;
+  margin: 0 auto;
 }
 
 a {

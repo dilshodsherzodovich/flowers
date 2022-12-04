@@ -1,10 +1,21 @@
 
 .info__container {
+  max-width: 1430px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 50px;
   background-color: rgba(242, 243, 245, 1);
+}
+
+.intro__container {
+  padding: 10px 0;
+}
+
+.info {
+  max-width:  1500px !important;
+  padding: 0 35px !important;
+  background-color: #F2F3F5 !important;
 }
 
 .info__btn {
@@ -48,7 +59,7 @@
 }
 
 .info__item {
-  margin-right: 10px;
+  margin-right: 20px;
 
   &:last-child {
     margin-right: 0;
